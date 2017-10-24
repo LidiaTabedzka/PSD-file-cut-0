@@ -1,4 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/*Variables*/
+$accent-color: #e84545;
+@mixin box-size($x, $y) {
+	width: $x;
+	height: $y;
+}
+
+/*General styles*/
 body {
 	color: white;
     font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+}
+
+/*Styles for section: header*/
+header {
+    background-image: url(images/tlo.png);
+    background-size: cover;
+}
+.navbar-inverse {
+	background: transparent;
+    border: none;
+    .container {
+        border-bottom: 1px #fff solid;	
+    }
+    .nav {
+        float: right;
+        font-weight: bold;
+    }
+    .navbar-nav>li>a {
+        color: white;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    .navbar-brand {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 300;
+    }
+    .logo {
+        color: #66697E;
+        font-weight: 900;
+    }
+}
+.hero {
+	height: calc(100vh - 70px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    h1 {
+        font-weight: bold;
+        font-size: 65px;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+    p {
+        font-size: 22px;
+        margin-bottom: 100px;
+    }
+}
+.btn {
+    border-radius: 2px;
+    @include box-size(200px, 50px);
+	font-size: 13px;
+	font-weight: bold;
+	background-color: $accent-color;
+    &:hover {
+        background-color: #d73434;	
+    }
+}
+
+/*Media queries*/
+@media (max-width: 767px) {
+    .hero {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+    }    
+
 }
