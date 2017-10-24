@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+
 
 /*Variables*/
 $accent-color: #e84545;
+$headers-color: #2d3033;
+$text-color-dark: #6c7279;
+$text-color-bright: white;
+
 @mixin box-size($x, $y) {
 	width: $x;
 	height: $y;
@@ -10,44 +16,58 @@ $accent-color: #e84545;
 
 /*General styles*/
 body {
-	color: white;
+	color: $text-color-bright;
     font-family: 'Raleway', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
+}
+.container-padding {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 /*Styles for section: header*/
 header {
-    background-image: url(images/tlo.png);
+    background: url(https://i.imgur.com/hAKpS9j.png);
     background-size: cover;
+    height: 100vh;
 }
 .navbar-inverse {
 	background: transparent;
     border: none;
     .container {
         border-bottom: 1px #fff solid;	
+        padding: 15px 0 15px 15px;
     }
     .nav {
         float: right;
         font-weight: bold;
     }
     .navbar-nav>li>a {
-        color: white;
+        color: $text-color-bright;
+        transition: 0.5s;
+        font-size: 13px;
         &:hover {
             color: $accent-color;
         }
     }
-    .navbar-brand {
-        font-size: 24px;
-        color: #fff;
-        font-weight: 300;
+    .navbar-toggle {
+        &:hover {
+            .icon-bar {
+                background-color: $accent-color;
+            }
+        }
     }
-    .logo {
-        color: #66697E;
-        font-weight: 900;
+    .navbar-brand {
+        padding: 15px 0;
     }
 }
 .hero {
-	height: calc(100vh - 70px);
+	height: calc(100vh - 80px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -68,15 +88,204 @@ header {
     @include box-size(200px, 50px);
 	font-size: 13px;
 	font-weight: bold;
-	background-color: $accent-color;
+    background-color: $accent-color;
+    text-transform: uppercase;
+    transition: 0.5s;
     &:hover {
         background-color: #d73434;	
     }
 }
 
+/*Styles for section: features*/
+.features {	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: $headers-color;
+    }
+    p {
+        color: $text-color-dark;
+    }
+    .row:first-child {
+        margin-bottom: 100px;
+    }
+ }
+
+/*Styles for section: works*/
+.works {
+    padding-top: 50px;
+    img {
+        border: 1px solid white;
+    }
+    .col-md-3 {
+        position: relative;
+        padding: 0;
+    }
+    .layer {
+        position: absolute;	
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 1s;
+        h4, p {
+            visibility: hidden;
+        }
+        &:hover {
+            background-color: rgba(232, 69, 69, 0.9);
+            h4, p {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/*Styles for section: team*/
+.team {
+    h3 {
+        font-size: 22px;	
+        color: $headers-color;
+    }
+    h5 {
+        color: $accent-color;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $text-color-dark;
+    }
+    .fa {
+        color: #c6cacc;
+        margin-top: 10px;
+        border: 1px solid #c6cacc;
+    }
+}
+
+/*Styles for sections: team and footer*/
+.fa {
+    font-size: 21px;
+    color: $text-color-bright;
+    padding: 10px;
+    @include box-size(45px, 45px);
+    transition: 0.5s;
+    text-align: center;
+    &:hover {
+        color: $headers-color;
+        border-color: $headers-color !important;
+    }
+}
+
+/*Styles for section: testimonials*/
+.testimonials {
+    padding: 0;
+    height: auto;
+}
+.carousel {
+	background-color: #53354a;	
+    .carousel-inner>.item>img {
+        width: 50%;	
+    }
+    .carousel-caption {
+        right: 0;
+        left: 0;
+        padding-left: 45%;
+        text-align: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-size: 36px;
+            font-style: italic;
+            font-family: 'Cardo', serif;
+        }
+        h4 {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+    }
+    .carousel-indicators {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+        padding-left: 60%;
+        left: 0;
+    }
+}
+
+/*Styles for section: download*/
+.download {
+    color: $headers-color;
+    height: auto;	
+    h2 {
+        font-weight: 300;
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 13px;
+    }
+    .btn {
+        margin-top: 20px;
+        width: 280px;
+        color: $text-color-bright;
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+/*Styles for section: footer*/
+footer {	
+    .contact {
+        background-color: #3a3e64;
+        padding: 40px 0;
+        h4 {
+            margin-bottom: 15px;
+        }
+        p {
+            color: #9092A7;
+        }
+        .fa {
+            border-radius: 2px;
+            border: 2px solid #fff;
+            &:hover {
+                background-color: white;
+            }
+        }
+    }
+    .copyrights {
+        background-color: #313454;
+        color: #808080;
+        padding: 20px 0;
+         .fa {
+            color: $accent-color;	
+            padding: 0;
+            @include box-size(auto, auto)
+            font-size: 14px;
+        }
+        .footer-author {
+            color: $text-color-bright;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+}
+
 /*Media queries*/
 @media (max-width: 767px) {
+    .container-padding {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    /*Styles for section: header*/
     .hero {
+        height: 80%;
         h1 {
             font-size: 30px;
         }
@@ -84,6 +293,177 @@ header {
             font-size: 18px;
             margin-bottom: 30px;
         }
-    }    
+    } 
+    .navbar-inverse {
+        .nav {
+            float: none;
+            text-align: center;
+        }
+    }
+    
+    /*Styles for section: features*/
+    .features {
+        p {
+            margin-bottom: 50px;
+        }
+        .row:first-child {
+            margin-bottom: 0;
+        }
+    }
 
+    /*Styles for sectio: works*/
+    .works {
+        .col-sm-6 {
+            display: inline-block;
+        }
+    }
+
+    /*Styles for section: team*/
+    .team {
+        text-align: center;
+        img {
+            display: inline-block;
+        }
+        .fa {
+            margin-bottom: 50px;
+        }
+    }
+
+    /*Styles for section: testimonials*/
+    .carousel {
+        .carousel-inner>.item>img {
+            width: 100%;
+            height: 350px;
+        }
+        .carousel-caption {
+            text-align: center;
+            padding-left: 15px;
+            align-items: flex-end;
+            p {
+                font-size: 20px;
+            }
+            .carousel-text {
+                background-color: rgba(83,53,74, 0.6);
+            }
+        }
+        .carousel-indicators {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+    /*Styles for section: download*/
+    .download .btn {
+        margin-bottom: 50px;
+    }
+    /*Styles for section: footer*/
+    footer {
+        font-size: 16px;	
+        .contact {
+            h4 {
+                margin-bottom: 25px;
+                font-size: 18px;
+            }
+            .col-md-4 {
+                margin-bottom: 50px;
+            }
+            .col-md-4:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+    /*Styles for section: header*/
+    .hero {
+        h1 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 20px;
+        }
+    } 
+    
+    /*Styles for section: features*/
+    .features {
+        p {
+            margin-bottom: 50px;
+        }
+        .row:first-child {
+            margin-bottom: 0;
+        }
+    }
+
+    /*Styles for section: team*/
+    .team {
+        text-align: center;
+        img {
+            display: inline-block;
+        }
+        .fa {
+            margin-bottom: 50px;
+        }
+    }
+
+    /*Styles for section: testimonials*/
+    .carousel {
+        .carousel-inner>.item>img {
+            width: 100%;
+            height: 500px;
+        }
+        .carousel-caption {
+            text-align: center;
+            padding-left: 15px;
+            align-items: flex-end;
+            p {
+                font-size: 30px;
+            }
+            .carousel-text {
+                background-color: rgba(83,53,74, 0.6);
+            }
+        }
+        .carousel-indicators {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+      /*Styles for section: footer*/
+      footer {
+        font-size: 18px;	
+        .contact {
+            h4 {
+                margin-bottom: 25px;
+                font-size: 20px;
+            }
+            .col-md-4 {
+                margin-bottom: 40px;
+            }
+            .col-md-4:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+     /*Styles for section: testimonials*/
+     .carousel {
+        .carousel-inner>.item>img {
+            width: 50%;
+            height: 500px;
+        }
+        .carousel-caption {
+            padding-left: 50%;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1350px) {
+    .carousel {
+        .carousel-inner>.item>img {
+            height: 450px;
+        }
+        .carousel-caption {
+            padding-left: 52%;
+        }
+    }
 }
