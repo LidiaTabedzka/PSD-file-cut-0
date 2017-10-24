@@ -4,6 +4,7 @@
 /*Variables*/
 $accent-color: #e84545;
 $headers-color: #2d3033;
+$text-color-dark: #6c7279;
 
 @mixin box-size($x, $y) {
 	width: $x;
@@ -104,7 +105,7 @@ header {
         color: $headers-color;
     }
     p {
-        color: #6c7279;
+        color: $text-color-dark;
     }
     .row:first-child {
         margin-bottom: 100px;
@@ -144,16 +145,41 @@ header {
     }
 }
 
+/*Styles for section: team*/
+.team {
+    h3 {
+        font-size: 22px;	
+        color: $headers-color;
+    }
+    h5 {
+        color: $accent-color;
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $text-color-dark;
+        font-size: 14px;
+    }
+    .fa {
+        color: #c6cacc;
+        font-size: 21px;
+        margin-top: 10px;
+        padding: 10px 8px 10px 14px;
+        @include box-size(45px, 45px);
+        border: 1px solid #c6cacc;
+        &:hover {
+            color: $headers-color;
+            border-color: $headers-color;
+        }
+    }
+}
+
 
 /*
 
-.team,
 .download {
 	color: $headers-color;	
-}
-.team p {
-	color: #6c7279;
-	font-size: 14px;
 }
 */
 
@@ -191,6 +217,17 @@ header {
     .works {
         .col-sm-6 {
             display: inline-block;
+        }
+    }
+
+    /*Styles for section: team*/
+    .team {
+        text-align: center;
+        img {
+            display: inline-block;
+        }
+        .fa {
+            margin-bottom: 50px;
         }
     }
 
