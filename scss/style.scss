@@ -50,6 +50,7 @@ header {
     }
     .navbar-nav>li>a {
         color: white;
+        transition: 0.5s;
         &:hover {
             color: $accent-color;
         }
@@ -89,6 +90,7 @@ header {
 	font-weight: bold;
     background-color: $accent-color;
     text-transform: uppercase;
+    transition: 0.5s;
     &:hover {
         background-color: #d73434;	
     }
@@ -167,9 +169,10 @@ header {
         color: #c6cacc;
         font-size: 21px;
         margin-top: 10px;
-        padding: 10px 8px 10px 14px;
+        padding: 10px;
         @include box-size(45px, 45px);
         border: 1px solid #c6cacc;
+        transition: 0.5s;
         &:hover {
             color: $headers-color;
             border-color: $headers-color;
@@ -179,6 +182,7 @@ header {
 /*Styles for section: testimonials*/
 .testimonials {
     padding: 0;
+    height: auto;
 }
 .carousel {
 	background-color: #53354a;	
@@ -213,12 +217,27 @@ header {
     }
 }
 
-/*
-
+/*Styles for section: download*/
 .download {
-	color: $headers-color;	
+    color: $headers-color;
+    height: auto;	
+    h2 {
+        font-weight: 300;
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 13px;
+    }
+    .btn {
+        margin-top: 20px;
+        width: 280px;
+        color: white;
+        &:hover {
+            color: black;
+        }
+    }
 }
-*/
+
 
 /*Media queries*/
 @media (max-width: 767px) {
