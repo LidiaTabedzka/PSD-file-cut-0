@@ -3,6 +3,8 @@
 
 /*Variables*/
 $accent-color: #e84545;
+$headers-color: #2d3033;
+
 @mixin box-size($x, $y) {
 	width: $x;
 	height: $y;
@@ -14,10 +16,21 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 13px;
 }
+.container-padding {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+h4 {
+    text-transform: uppercase;
+}
+header,
+section {
+    height: 100vh;
+}
 
 /*Styles for section: header*/
 header {
-    background-image: url(images/tlo.png);
+    background: url(https://i.imgur.com/hAKpS9j.png);
     background-size: cover;
 }
 .navbar-inverse {
@@ -25,6 +38,7 @@ header {
     border: none;
     .container {
         border-bottom: 1px #fff solid;	
+        padding: 15px 0 15px 15px;
     }
     .nav {
         float: right;
@@ -36,18 +50,19 @@ header {
             color: $accent-color;
         }
     }
-    .navbar-brand {
-        font-size: 24px;
-        color: #fff;
-        font-weight: 300;
+    .navbar-toggle {
+        &:hover {
+            .icon-bar {
+                background-color: $accent-color;
+            }
+        }
     }
-    .logo {
-        color: #66697E;
-        font-weight: 900;
+    .navbar-brand {
+        padding: 15px 0;
     }
 }
 .hero {
-	height: calc(100vh - 70px);
+	height: calc(100vh - 80px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -74,9 +89,45 @@ header {
     }
 }
 
+/*Styles for section: features*/
+.features {	
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+        font-weight: bold;
+        font-size: 14px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: $headers-color;
+    }
+    p {
+        color: #6c7279;
+    }
+    .row:first-child {
+        margin-bottom: 100px;
+    }
+ }
+
+
+/*
+
+.team,
+.download {
+	color: $headers-color;	
+}
+.team p {
+	color: #6c7279;
+	font-size: 14px;
+}
+*/
+
 /*Media queries*/
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+        /*Styles for section: header*/
     .hero {
+        height: 80%;
         h1 {
             font-size: 30px;
         }
@@ -84,6 +135,28 @@ header {
             font-size: 18px;
             margin-bottom: 30px;
         }
-    }    
+    } 
+    .navbar-inverse {
+        .nav {
+            float: none;
+           text-align: center;
+        }
+    }
+    
+    /*Styles for section: features*/
+    .features {
+        p {
+            margin-bottom: 50px;
+        }
+        .row:first-child {
+            margin-bottom: 0;
+        }
+    }
 
+}
+
+@media (max-width: 1200px) {
+    section {
+        height: auto;
+    }
 }
