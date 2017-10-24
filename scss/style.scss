@@ -22,6 +22,7 @@ body {
 }
 h4 {
     text-transform: uppercase;
+    font-weight: bold;
 }
 header,
 section {
@@ -83,7 +84,8 @@ header {
     @include box-size(200px, 50px);
 	font-size: 13px;
 	font-weight: bold;
-	background-color: $accent-color;
+    background-color: $accent-color;
+    text-transform: uppercase;
     &:hover {
         background-color: #d73434;	
     }
@@ -96,7 +98,6 @@ header {
     justify-content: center;
     align-items: center;
     h4 {
-        font-weight: bold;
         font-size: 14px;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -109,6 +110,39 @@ header {
         margin-bottom: 100px;
     }
  }
+
+/*Styles for section: works*/
+.works {
+    padding-top: 50px;
+    img {
+        border: 1px solid white;
+    }
+    .col-md-3 {
+        position: relative;
+        padding: 0;
+    }
+    .layer {
+        position: absolute;	
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        transition: 1s;
+        h4, p {
+            visibility: hidden;
+        }
+        &:hover {
+            background-color: rgba(232, 69, 69, 0.9);
+            h4, p {
+                visibility: visible;
+            }
+        }
+    }
+}
 
 
 /*
@@ -125,7 +159,7 @@ header {
 
 /*Media queries*/
 @media (max-width: 991px) {
-        /*Styles for section: header*/
+    /*Styles for section: header*/
     .hero {
         height: 80%;
         h1 {
@@ -150,6 +184,13 @@ header {
         }
         .row:first-child {
             margin-bottom: 0;
+        }
+    }
+
+    /*Styles for sectio: works*/
+    .works {
+        .col-sm-6 {
+            display: inline-block;
         }
     }
 
