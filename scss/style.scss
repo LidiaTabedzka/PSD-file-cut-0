@@ -101,6 +101,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    .fa {
+        font-size: 60px;
+        @include box-size(60px, 60px);
+        color: $accent-color;
+        padding: 0;
+    }
     h4 {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -191,6 +197,7 @@ header {
 	background-color: #53354a;	
     .carousel-inner>.item>img {
         width: 50%;	
+        object-fit: cover;
     }
     .carousel-caption {
         right: 0;
@@ -448,7 +455,6 @@ footer {
      /*Styles for section: testimonials*/
      .carousel {
         .carousel-inner>.item>img {
-            width: 50%;
             height: 500px;
         }
         .carousel-caption {
