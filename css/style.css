@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Cardo");
+/*Variables*/
+/*General styles*/
+body {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px; }
+
+.container-padding {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px; }
+
+/*Styles for section: header*/
+header {
+  background: url(https://i.imgur.com/hAKpS9j.png);
+  background-size: cover;
+  height: 100vh; }
+
+.navbar-inverse {
+  background: transparent;
+  border: none; }
+  .navbar-inverse .container {
+    border-bottom: 1px #fff solid;
+    padding: 15px 0 15px 15px; }
+  .navbar-inverse .nav {
+    float: right;
+    font-weight: bold; }
+  .navbar-inverse .navbar-nav > li > a {
+    color: white;
+    transition: 0.5s;
+    font-size: 13px; }
+    .navbar-inverse .navbar-nav > li > a:hover {
+      color: #e84545; }
+  .navbar-inverse .navbar-toggle:hover .icon-bar {
+    background-color: #e84545; }
+  .navbar-inverse .navbar-brand {
+    padding: 15px 0; }
+
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .hero h1 {
+    font-weight: bold;
+    font-size: 65px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 0; }
+  .hero p {
+    font-size: 22px;
+    margin-bottom: 100px; }
+
+.btn {
+  border-radius: 2px;
+  width: 200px;
+  height: 50px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #e84545;
+  text-transform: uppercase;
+  transition: 0.5s; }
+  .btn:hover {
+    background-color: #d73434; }
+
+/*Styles for section: features*/
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .features .fa {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+    color: #e84545;
+    padding: 0; }
+  .features h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #2d3033; }
+  .features p {
+    color: #6c7279; }
+  .features .row:first-child {
+    margin-bottom: 100px; }
+
+/*Styles for section: works*/
+.works {
+  padding-top: 50px; }
+  .works img {
+    border: 1px solid white; }
+  .works .col-md-3 {
+    position: relative;
+    padding: 0; }
+  .works .layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s; }
+    .works .layer h4, .works .layer p {
+      visibility: hidden; }
+    .works .layer:hover {
+      background-color: rgba(232, 69, 69, 0.9); }
+      .works .layer:hover h4, .works .layer:hover p {
+        visibility: visible; }
+
+/*Styles for section: team*/
+.team h3 {
+  font-size: 22px;
+  color: #2d3033; }
+
+.team h5 {
+  color: #e84545;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 20px; }
+
+.team p {
+  color: #6c7279; }
+
+.team .fa {
+  color: #c6cacc;
+  margin-top: 10px;
+  border: 1px solid #c6cacc; }
+
+/*Styles for sections: team and footer*/
+.fa {
+  font-size: 21px;
+  color: white;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  transition: 0.5s;
+  text-align: center; }
+  .fa:hover {
+    color: #2d3033;
+    border-color: #2d3033 !important; }
+
+/*Styles for section: testimonials*/
+.testimonials {
+  padding: 0;
+  height: auto; }
+
+.carousel {
+  background-color: #53354a; }
+  .carousel .carousel-inner > .item > img {
+    width: 50%;
+    object-fit: cover; }
+  .carousel .carousel-caption {
+    right: 0;
+    left: 0;
+    padding-left: 45%;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .carousel .carousel-caption p {
+      font-size: 36px;
+      font-style: italic;
+      font-family: 'Cardo', serif; }
+    .carousel .carousel-caption h4 {
+      margin-top: 20px;
+      font-size: 13px; }
+  .carousel .carousel-indicators {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 60%;
+    left: 0; }
+
+/*Styles for section: download*/
+.download {
+  color: #2d3033;
+  height: auto; }
+  .download h2 {
+    font-weight: 300;
+    font-size: 28px; }
+  .download h4 {
+    font-size: 13px; }
+  .download .btn {
+    margin-top: 20px;
+    width: 280px;
+    color: white; }
+    .download .btn:hover {
+      color: black; }
+
+/*Styles for section: footer*/
+footer .contact {
+  background-color: #3a3e64;
+  padding: 40px 0; }
+  footer .contact h4 {
+    margin-bottom: 15px; }
+  footer .contact p {
+    color: #9092A7; }
+  footer .contact .fa {
+    border-radius: 2px;
+    border: 2px solid #fff; }
+    footer .contact .fa:hover {
+      background-color: white; }
+
+footer .copyrights {
+  background-color: #313454;
+  color: #808080;
+  padding: 20px 0; }
+  footer .copyrights .fa {
+    color: #e84545;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-size: 14px; }
+  footer .copyrights .footer-author {
+    color: white;
+    font-family: 'Open Sans', sans-serif; }
+
+/*Media queries*/
+@media (max-width: 767px) {
+  .container-padding {
+    padding-bottom: 20px;
+    padding-top: 20px; }
+  /*Styles for section: header*/
+  .hero {
+    height: 80%; }
+    .hero h1 {
+      font-size: 30px; }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px; }
+  .navbar-inverse .nav {
+    float: none;
+    text-align: center; }
+  /*Styles for section: features*/
+  .features p {
+    margin-bottom: 50px; }
+  .features .row:first-child {
+    margin-bottom: 0; }
+  /*Styles for sectio: works*/
+  .works .col-sm-6 {
+    display: inline-block; }
+  /*Styles for section: team*/
+  .team {
+    text-align: center; }
+    .team img {
+      display: inline-block; }
+    .team .fa {
+      margin-bottom: 50px; }
+  /*Styles for section: testimonials*/
+  .carousel .carousel-inner > .item > img {
+    width: 100%;
+    height: 350px; }
+  .carousel .carousel-caption {
+    text-align: center;
+    padding-left: 15px;
+    align-items: flex-end; }
+    .carousel .carousel-caption p {
+      font-size: 20px; }
+    .carousel .carousel-caption .carousel-text {
+      background-color: rgba(83, 53, 74, 0.6); }
+  .carousel .carousel-indicators {
+    text-align: center;
+    padding-left: 0; }
+  /*Styles for section: download*/
+  .download .btn {
+    margin-bottom: 50px; }
+  /*Styles for section: footer*/
+  footer {
+    font-size: 16px; }
+    footer .contact h4 {
+      margin-bottom: 25px;
+      font-size: 18px; }
+    footer .contact .col-md-4 {
+      margin-bottom: 50px; }
+    footer .contact .col-md-4:last-of-type {
+      margin-bottom: 0; } }
+
+@media (min-width: 767px) and (max-width: 992px) {
+  /*Styles for section: header*/
+  .hero h1 {
+    font-size: 45px; }
+  .hero p {
+    font-size: 20px; }
+  /*Styles for section: features*/
+  .features p {
+    margin-bottom: 50px; }
+  .features .row:first-child {
+    margin-bottom: 0; }
+  /*Styles for section: team*/
+  .team {
+    text-align: center; }
+    .team img {
+      display: inline-block; }
+    .team .fa {
+      margin-bottom: 50px; }
+  /*Styles for section: testimonials*/
+  .carousel .carousel-inner > .item > img {
+    width: 100%;
+    height: 500px; }
+  .carousel .carousel-caption {
+    text-align: center;
+    padding-left: 15px;
+    align-items: flex-end; }
+    .carousel .carousel-caption p {
+      font-size: 30px; }
+    .carousel .carousel-caption .carousel-text {
+      background-color: rgba(83, 53, 74, 0.6); }
+  .carousel .carousel-indicators {
+    text-align: center;
+    padding-left: 0; }
+  /*Styles for section: footer*/
+  footer {
+    font-size: 18px; }
+    footer .contact h4 {
+      margin-bottom: 25px;
+      font-size: 20px; }
+    footer .contact .col-md-4 {
+      margin-bottom: 40px; }
+    footer .contact .col-md-4:last-of-type {
+      margin-bottom: 0; } }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /*Styles for section: testimonials*/
+  .carousel .carousel-inner > .item > img {
+    height: 500px; }
+  .carousel .carousel-caption {
+    padding-left: 50%; } }
+
+@media (min-width: 1201px) and (max-width: 1350px) {
+  .carousel .carousel-inner > .item > img {
+    height: 450px; }
+  .carousel .carousel-caption {
+    padding-left: 52%; } }
+
+/*# sourceMappingURL=style.css.map */
