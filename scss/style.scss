@@ -56,7 +56,10 @@ header {
         }
     }
     .navbar-toggle {
-        &:hover {
+        border: none;
+        &:hover,
+        &:focus {
+            background-color: transparent;
             .icon-bar {
                 background-color: $accent-color;
             }
@@ -101,6 +104,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     .fa {
         font-size: 60px;
         @include box-size(60px, 60px);
@@ -122,6 +126,7 @@ header {
 
 /*Styles for section: works*/
 .works {
+    height: 100vh;
     padding-top: 50px;
     img {
         border: 1px solid white;
@@ -154,6 +159,7 @@ header {
 
 /*Styles for section: team*/
 .team {
+    height: 100vh;
     h3 {
         font-size: 22px;	
         color: $headers-color;
@@ -190,13 +196,14 @@ header {
 
 /*Styles for section: testimonials*/
 .testimonials {
-    padding: 0;
+    padding: 100px 0 0 0;
     height: auto;
 }
 .carousel {
 	background-color: #53354a;	
     .carousel-inner>.item>img {
         width: 50%;	
+        height: 500px;
         object-fit: cover;
     }
     .carousel-caption {
@@ -274,7 +281,7 @@ footer {
          .fa {
             color: $accent-color;	
             padding: 0;
-            @include box-size(auto, auto)
+            @include box-size(auto, auto);
             font-size: 14px;
         }
         .footer-author {
@@ -291,8 +298,10 @@ footer {
         padding-top: 20px;
     }
     /*Styles for section: header*/
+    header {
+        height: 100%;
+    }
     .hero {
-        height: 80%;
         h1 {
             font-size: 30px;
         }
@@ -310,6 +319,7 @@ footer {
     
     /*Styles for section: features*/
     .features {
+        height: 100%;
         p {
             margin-bottom: 50px;
         }
@@ -320,6 +330,7 @@ footer {
 
     /*Styles for sectio: works*/
     .works {
+        height: 100%;
         .col-sm-6 {
             display: inline-block;
         }
@@ -328,6 +339,7 @@ footer {
     /*Styles for section: team*/
     .team {
         text-align: center;
+        height: 100%;
         img {
             display: inline-block;
         }
@@ -337,6 +349,9 @@ footer {
     }
 
     /*Styles for section: testimonials*/
+    .testimonials {
+        padding-top: 20px;
+    }
     .carousel {
         .carousel-inner>.item>img {
             width: 100%;
@@ -392,6 +407,7 @@ footer {
     
     /*Styles for section: features*/
     .features {
+        height: 100%;
         p {
             margin-bottom: 50px;
         }
@@ -400,9 +416,15 @@ footer {
         }
     }
 
+    /*Styles for sectio: works*/
+    .works {
+        height: 100%;
+    }
+
     /*Styles for section: team*/
     .team {
         text-align: center;
+        height: 100%;
         img {
             display: inline-block;
         }
@@ -415,7 +437,6 @@ footer {
     .carousel {
         .carousel-inner>.item>img {
             width: 100%;
-            height: 500px;
         }
         .carousel-caption {
             text-align: center;
@@ -452,11 +473,14 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+    /*Styles for sectio: works*/
+    .works {
+        img {
+            height: 300px;
+        }
+    }
      /*Styles for section: testimonials*/
      .carousel {
-        .carousel-inner>.item>img {
-            height: 500px;
-        }
         .carousel-caption {
             padding-left: 50%;
         }
@@ -464,10 +488,13 @@ footer {
 }
 
 @media (min-width: 1201px) and (max-width: 1350px) {
-    .carousel {
-        .carousel-inner>.item>img {
-            height: 450px;
+    /*Styles for sectio: works*/
+    .works {
+        img {
+            height: 300px;
         }
+    }
+    .carousel {
         .carousel-caption {
             padding-left: 52%;
         }

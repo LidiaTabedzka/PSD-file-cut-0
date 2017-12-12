@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Modern Website</title>
@@ -11,6 +11,8 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js"></script>
     </head>
     <body>
     	<header class="container-fluid">
@@ -23,15 +25,15 @@
 			                <span class="icon-bar"></span>
 			                <span class="icon-bar"></span>
 			            </button>
-						<a class="navbar-brand" href=""><img src="images/activebox.png"></a>
+						<a class="navbar-brand" href=""><img src="images/activebox.png" alt=""></a>
 					</div>
 					<div class="collapse navbar-collapse" id="navbar-collapse-1">
-						<ul class="nav navbar-nav text-uppercase">
-							<li><a href="">Features</a></li>
-							<li><a href="">Works</a></li>
-							<li><a href="">Our team</a></li>
-							<li><a href="">Testimonials</a></li>
-							<li><a href="">Download</a></li>
+						<ul class="nav navbar-nav text-uppercase" id="nav">
+							<li><a href="#featuresSection">Features</a></li>
+							<li><a href="#worksSection">Works</a></li>
+							<li><a href="#teamSection">Our team</a></li>
+							<li><a href="#testimonialsSection">Testimonials</a></li>
+							<li><a href="#downloadSection">Download</a></li>
 						</ul>
 					</div>
 				</div>
@@ -44,7 +46,7 @@
 				</div>
 			</div>
 		</header>
-		<section class="features">
+		<section class="features" id="featuresSection">
 			<div class="container text-center container-padding">
 				<div class="row">
 					<div class="col-md-4">
@@ -82,7 +84,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="works container-fluid">
+		<section class="works container-fluid" id="worksSection">
 			<div class="row text-center">
 				<div class="col-md-3 col-sm-6">
 					<div class="layer">
@@ -160,7 +162,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="team container container-padding">
+		<section class="team container container-padding" id="teamSection">
 			<div class="row">
 				<div class="col-md-3">
 					<img class="img-responsive" src="images/team1.png" alt="">
@@ -208,7 +210,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="testimonials container-fluid container-padding">
+		<section class="testimonials container-fluid container-padding" id="testimonialsSection">
 			<div class="carousel">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators container">
@@ -268,7 +270,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="download container text-center container-padding">
+		<section class="download container text-center container-padding" id="downloadSection">
 			<h2>Are You Ready To Start? Download Now For Free!</h2>
 			<h4>Fusce dapibus, tellus ac cursus commodo</h4>
 			<button class="btn">Download here</button>
@@ -308,5 +310,11 @@
 				</div>
 				</div>
 		</footer>
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+		   $('#nav').localScroll({duration:800});
+		});
+		</script>
     </body>
 </html>
